@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model FlickrClone.Models.Post
+
+<h4>Edit this post: @Html.DisplayFor(model => model.Description)</h4>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.PostId)
+
+    @Html.LabelFor(model => model.Title)
+    @Html.EditorFor(model => model.Title)
+
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+
+    @Html.LabelFor(model => model.Image)
+    @Html.EditorFor(model => model.Image)
+
+    <input type="submit" value="Save" class="btn btn-default" />
+}
+@Html.ActionLink("Back to List", "Index", "Account")

@@ -4,9 +4,9 @@
 }
 
 @using System.Security.Claims
+@model IEnumerable<FlickrClone.Models.Post>
 
-<h2>Authentication with Identity</h2>
-<hr />
+
 @if (User.Identity.IsAuthenticated)
 {
     <p>Hello @User.Identity.Name!</p>
@@ -14,9 +14,18 @@
     {
         <input type="submit" class="btn btn-default" value="Log out" />
     }
+    @Html.ActionLink("New Post", "Create")
 }
 else
 {
     <p>@Html.ActionLink("Register", "Register")</p>
     <p>@Html.ActionLink("Log in", "Login")</p>
 }
+
+<ul>
+    @foreach (var post in Model)
+    {
+       <h3>@Html.ActionLink(post.Title, "Details", "Posts", new { id = post.PostId }, null) | @Html.ActionLink("Edit", "Edit", "Posts", new { id = post.PostId }, null) | @Html.ActionLink("Delete", "Delete", "Posts", new { id = post.PostId }, null)</h3> 
+    }
+</ul>
+
