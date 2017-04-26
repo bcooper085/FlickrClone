@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{04AEE430-89ED-42B8-BC84-82EE99CE58E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0D36638E-64E8-4B90-A58F-51549CE2DDFB}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "FlickrClone", "src\FlickrClone\FlickrClone.xproj", "{66B1CACE-6E8A-451D-9A5F-6E79E7DCBD8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{492A1679-3A3F-4BAB-B9D0-CBE756441A4E}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Flickr.Tests", "Flickr.Tests\Flickr.Tests.xproj", "{94C36126-01F3-48CD-80B6-EBB1BCCFB30A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66B1CACE-6E8A-451D-9A5F-6E79E7DCBD8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B1CACE-6E8A-451D-9A5F-6E79E7DCBD8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B1CACE-6E8A-451D-9A5F-6E79E7DCBD8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B1CACE-6E8A-451D-9A5F-6E79E7DCBD8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94C36126-01F3-48CD-80B6-EBB1BCCFB30A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94C36126-01F3-48CD-80B6-EBB1BCCFB30A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94C36126-01F3-48CD-80B6-EBB1BCCFB30A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94C36126-01F3-48CD-80B6-EBB1BCCFB30A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{66B1CACE-6E8A-451D-9A5F-6E79E7DCBD8A} = {04AEE430-89ED-42B8-BC84-82EE99CE58E7}
+		{94C36126-01F3-48CD-80B6-EBB1BCCFB30A} = {492A1679-3A3F-4BAB-B9D0-CBE756441A4E}
+	EndGlobalSection
+EndGlobal
