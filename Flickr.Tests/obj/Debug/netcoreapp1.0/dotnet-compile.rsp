@@ -196,5 +196,6 @@
 --reference:C:\Users\epicodus\.nuget\packages\xunit.runner.utility\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.utility.dotnet.dll
 --reference:C:\Users\epicodus\Desktop\FlickrClone\src\FlickrClone\bin\Debug\netcoreapp1.0\FlickrClone.dll
 C:\Users\epicodus\Desktop\FlickrClone\Flickr.Tests\Class1.cs
-C:\Users\epicodus\Desktop\FlickrClone\Flickr.Tests\PostTest.cs
+C:\Users\epicodus\Desktop\FlickrClone\Flickr.Tests\ControllerTests\PostsControllerTest.cs
+C:\Users\epicodus\Desktop\FlickrClone\Flickr.Tests\ModelTests\PostTest.cs
 C:\Users\epicodus\Desktop\FlickrClone\Flickr.Tests\Properties\AssemblyInfo.cs

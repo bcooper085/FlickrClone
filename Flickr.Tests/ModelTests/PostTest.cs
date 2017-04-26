@@ -14,6 +14,7 @@ namespace Flickr.Tests
         {
             //Arrange
             var post = new Post();
+            post.Description = "test image";
 
             //Act
             var result = post.Description;

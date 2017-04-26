@@ -6,17 +6,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FlickrClone.Models;
-
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace FlickrClone.Controllers
 {
     public class PostsController : Controller
     {
-        // GET: /<controller>/
+        private readonly FlickrCloneDbContext _db;
+        private readonly UserManager<User> _userManager;
+
+        public PostsController(UserManager<User> userManager, FlickrCloneDbContext db)
+        {
+            _userManager = userManager;
+            _db = db;
+        }
         public IActionResult Index()
         {
-            return View();
+            return View(_db.Posts.ToList());
         }
     }
 }
