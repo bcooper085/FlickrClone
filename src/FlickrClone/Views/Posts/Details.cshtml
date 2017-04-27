@@ -5,16 +5,20 @@
 @model FlickrClone.Models.Post
 
 <h2>Post Details</h2>
+<div>@Html.ActionLink("Edit", "Edit", new { id = Model.PostId }, null) | @Html.ActionLink("Delete", "Delete", new { id = Model.PostId }, null)</div>
 <hr />
+<div class="row">
+    @Html.DisplayNameFor(model => model.Title)
+    @Html.DisplayFor(model => model.Title)
+</div>
 
-@Html.DisplayNameFor(model => model.Title)
-@Html.DisplayFor(model => model.Title)
-
+<div class="row">
+    <img src="@Url.Content(Model.Image)" alt="Image" />
+</div>
 @Html.DisplayNameFor(model => model.Description)
 @Html.DisplayFor(model => model.Description)
 
-@Html.DisplayNameFor(model => model.Image)
-@Html.DisplayFor(model => model.Image)
+
 
 @using (Html.BeginForm("Create", "Posts", FormMethod.Post))
 {
@@ -22,7 +26,6 @@
     <label for="body">Enter Comment</label>
     <input id="body" name="body" type="text" />
 
-    <input type="submit" value="Add Comment" class="btn btn-default" />
+    <input type="submit" value="Add Comment" class="btn btn-primary" />
 }
 
-@Html.ActionLink("Back to index", "Index", "Account")

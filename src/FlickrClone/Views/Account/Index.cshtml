@@ -7,25 +7,9 @@
 @model IEnumerable<FlickrClone.Models.Post>
 
 
-@if (User.Identity.IsAuthenticated)
-{
-    <p>Hello @User.Identity.Name!</p>
-    @using (Html.BeginForm("LogOff", "Account"))
-    {
-        <input type="submit" class="btn btn-default" value="Log out" />
-    }
-    @Html.ActionLink("New Post", "Create")
-}
-else
-{
-    <p>@Html.ActionLink("Register", "Register")</p>
-    <p>@Html.ActionLink("Log in", "Login")</p>
-}
-
-<ul>
     @foreach (var post in Model)
     {
-       <h3>@Html.ActionLink(post.Title, "Details", "Posts", new { id = post.PostId }, null) | @Html.ActionLink("Edit", "Edit", "Posts", new { id = post.PostId }, null) | @Html.ActionLink("Delete", "Delete", "Posts", new { id = post.PostId }, null)</h3> 
+        <div class="col-md-4"><h3>@Html.ActionLink(post.Title, "Details", "Posts", new { id = post.PostId }, null)</h3><img src="@Url.Content(post.Image)" alt="Image" /></div>
+        
     }
-</ul>
 

@@ -1,13 +1,40 @@
 ﻿<!DOCTYPE html>
 
 <html>
-<head>
+<head><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
     <div>
-        @RenderBody()
+        <div class="container">
+            <nav class="navbar navbar-inverse" id="header">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand title-link">@Html.ActionLink("Welcome to Flickr Bitch!", "Index", "Account")</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>@Html.ActionLink("Posts", "Index", "Account")</li>
+                        <li>@if (User.Identity.IsAuthenticated)
+                        {
+                            <li>@Html.ActionLink("New Post", "Create")</li>
+                            <li>@Html.ActionLink(User.Identity.Name, "Index", "Posts")</li>
+                            <li>@using (Html.BeginForm("LogOff", "Account"))
+                            {
+                                <input type="submit" id="logout" value="Logout" />
+                            }</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Register", "Register")</li>
+                            <li>@Html.ActionLink("Login", "Login")</li>
+                        }</li>
+                    </ul>
+                </div>
+            </nav>
+            @RenderBody()
+        </div>
     </div>
 </body>
 </html>

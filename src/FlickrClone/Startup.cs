@@ -44,6 +44,7 @@ namespace FlickrClone
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
             app.UseIdentity();
             app.UseMvc(routes =>
             {
