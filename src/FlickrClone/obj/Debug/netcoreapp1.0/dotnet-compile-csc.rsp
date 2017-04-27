@@ -205,6 +205,8 @@
 "C:\Users\epicodus\Desktop\flickrclone\src\FlickrClone\Controllers\PostsController.cs"
 "C:\Users\epicodus\Desktop\flickrclone\src\FlickrClone\Migrations\20170426163211_Initial.cs"
 "C:\Users\epicodus\Desktop\flickrclone\src\FlickrClone\Migrations\20170426163211_Initial.Designer.cs"
+"C:\Users\epicodus\Desktop\flickrclone\src\FlickrClone\Migrations\20170427222042_Bool.cs"
+"C:\Users\epicodus\Desktop\flickrclone\src\FlickrClone\Migrations\20170427222042_Bool.Designer.cs"
 "C:\Users\epicodus\Desktop\flickrclone\src\FlickrClone\Migrations\FlickrCloneDbContextModelSnapshot.cs"
 "C:\Users\epicodus\Desktop\flickrclone\src\FlickrClone\Models\Comment.cs"
 "C:\Users\epicodus\Desktop\flickrclone\src\FlickrClone\Models\FlickrCloneDbContext.cs"

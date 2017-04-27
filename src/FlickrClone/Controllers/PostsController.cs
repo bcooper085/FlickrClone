@@ -16,6 +16,7 @@ namespace FlickrClone.Controllers
         private readonly FlickrCloneDbContext _db;
         private readonly UserManager<User> _userManager;
 
+
         public PostsController(UserManager<User> userManager, FlickrCloneDbContext db)
         {
             _userManager = userManager;

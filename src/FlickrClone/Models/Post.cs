@@ -10,6 +10,23 @@ namespace FlickrClone.Models
     [Table("Posts")]
     public class Post
     {
+        public override bool Equals(System.Object otherPost)
+        {
+            if (!(otherPost is Post))
+            {
+                return false;
+            }
+            else
+            {
+                Post newPost = (Post)otherPost;
+                return this.PostId.Equals(newPost.PostId);
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return this.PostId.GetHashCode();
+        }
         public Post()
         {
             this.Comments = new HashSet<Comment>();
