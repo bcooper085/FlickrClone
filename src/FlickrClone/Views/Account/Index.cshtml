@@ -6,10 +6,17 @@
 @using System.Security.Claims
 @model IEnumerable<FlickrClone.Models.Post>
 
-
+<div class="row">
     @foreach (var post in Model)
     {
-        <div class="col-md-4"><h3>@Html.ActionLink(post.Title, "Details", "Posts", new { id = post.PostId }, null)</h3><img src="@Url.Content(post.Image)" alt="Image" /></div>
-        
+        <div class="col-md-4">
+            <div class="well well-sm">
+            <h3>@Html.ActionLink(post.Title, "Details", "Posts", new { id = post.PostId }, null)</h3>
+                <img src="@Url.Content(post.Image)" alt="Image" />
+            </div>
+        </div>
     }
+</div>
+
+
 

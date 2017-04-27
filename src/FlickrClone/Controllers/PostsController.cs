@@ -27,7 +27,9 @@ namespace FlickrClone.Controllers
         }
         public IActionResult Details(int id)
         {
-            var thisPost = _db.Posts.FirstOrDefault(post => post.PostId == id);
+            var thisPost = _db.Posts
+                .Include(p => p.Comments)
+                .FirstOrDefault(posts => posts.PostId == id);
             return View(thisPost);
         }
         public IActionResult Create()
@@ -38,6 +40,7 @@ namespace FlickrClone.Controllers
         public async Task<IActionResult> Create(int postId, string Body)
         {
             var comment = new Comment();
+            comment.Body = Body;
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
             comment.Post = _db.Posts

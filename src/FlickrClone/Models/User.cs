@@ -8,5 +8,6 @@ namespace FlickrClone.Models
 {
     public class User : IdentityUser
     {
+
     }
 }
